@@ -62,10 +62,7 @@ var renderLetterTemplate = function(valueMap){
   
   $(".template-form").hide();
   $(".template-result").show();        
-  $.tmpl(htmlMarkup, valueMap).appendTo("#letterContent");
-  
-  valueMap['advice'] = escape(valueMap['advice']);
-  return $.tmpl(uriMarkup, valueMap)[0]+'';
+  return $.tmpl(htmlMarkup, valueMap).appendTo("#letterContent");
 }
 
 $('#resultForm').submit(function(event){
@@ -96,11 +93,9 @@ $('#templateForm').submit(function(event)
       var mailValues = getFormValues('#resultForm');
       console.log(mailValues);
       
-      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], bodyData, mailValues['client']);
+      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], '', mailValues['client']);
       var win = window.open(mailLink, '_blank');
       if(win){
-          //Browser has allowed it to be opened
-          win.focus();
           
           $(".template-form").show();
           $(".template-result").hide(); 
@@ -108,9 +103,17 @@ $('#templateForm').submit(function(event)
           //Reset forms
           $("#templateForm")[0].reset();
           $("#resultForm")[0].reset();
+          
+          //Browser has allowed it to be opened
+          win.focus();
+          
+          var bodyElem = win.document.querySelector('.Am.Al.editable.LW-avf');
+          
+          bodyElem.innerHTML = bodyData;
       }else{
           //Broswer has blocked it
           alert('Please allow popups for this site');
+          $("#resultForm")[0].reset();
       }
 
       
