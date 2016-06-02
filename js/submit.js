@@ -9,8 +9,8 @@ var renderLetterTemplate = function(valueMap){
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>I’m excited about my future there while I continue to be excited about all the things you’ll continue to accomplish here (except for you ${fun_of_person}), ${fun_of_reason}</span></p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If I could leave you all with just one thought, remember <br><br> ${advice} </p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!</span></p>"+
-              "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-${name}</span></p>"+
-              "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>${contact}</span></p>";
+              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-${name}</span></p>"+
+              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>${contact}</span></p>";
   
   $(".template-form").hide();
   $(".template-result").show();        
