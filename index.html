@@ -44,7 +44,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="Subject Line">Say how sad you are to be leaving:</label>
               <div class="col-md-5">
-                <select id="Subject Line" name="Subject Line" class="form-control">
+                <select id="Subject Line" name="subject" class="form-control">
                   <option value="I bid you adieu">I bid you adieu</option>
                   <option value="A Fond Farewell">A Fond Farewell</option>
                   <option value="As I get ready to go">As I get ready to go</option>
@@ -85,10 +85,22 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="selectbasic">Expression of sadness</label>
               <div class="col-md-4">
-                <select id="selectbasic" name="selectbasic" class="form-control">
+                <select id="sadness" name="sadness" class="form-control">
                   <option value="a heavy heart">a heavy heart</option>
                   <option value="a gentle sad face">a gentle sad face</option>
                   <option value="a knowing glance">a knowing glance</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="selectbasic">Difficulty of leaving</label>
+              <div class="col-md-4">
+                <select id="difficulty" name="difficulty" class="form-control">
+                  <option value="a heavy heart">obviously</option>
+                  <option value="a gentle sad face">clearly</option>
+                  <option value="a knowing glance">apparently</option>
                 </select>
               </div>
             </div>
@@ -170,6 +182,28 @@
               </div>
             </div>
             
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="fun_of_person">Make fun of person: </label>  
+              <div class="col-md-4">
+              <input id="fun_of_person" name="fun_of_person" type="text" placeholder="you never finish anything!" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="advice">Sage advice quotes</label>
+              <div class="col-md-4">
+                <select id="advice" name="advice" class="form-control">
+                  <option value="\"The best preparation for tomorrow is doing your best today.\" - H. Jackson Brown" >"The best preparation for tomorrow is doing your best today." -H. Jackson Brown</option>
+                  <option value="\"It is during our darkest moments that we must focus to see the light.\" - Aristotle Onassise">"It is during our darkest moments that we must focus to see the light." - Aristotle Onassis</option>
+                  <option value="\"Believe you can and you're halfway there.\" - Theodore Roosevelt">"Believe you can and you're halfway there." - Theodore Roosevelt</option>
+                </select>
+              </div>
+            </div>
+            
+            
             <!-- Textarea -->
             <div class="form-group">
               <label class="col-md-4 control-label" for="contact">Contact Info</label>
@@ -199,7 +233,7 @@
         <div class="col-xs-12">
           <h3>Resulting Letter:</h3>
         </div>
-        <div class="col-xs-12">
+        <div class="col-xs-12" id="letterContent">
           
         </div>
       </div>
