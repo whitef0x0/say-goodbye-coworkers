@@ -86,7 +86,7 @@ $('#templateForm').submit(function(event)
     var values = getFormValues('#templateForm');
     var bodyData = escape(renderLetterTemplate(values));
     console.log(bodyData);
-    console.log(valueMap);
+    console.log(values);
     
     $('#resultForm').submit(function(event){
       event.preventDefault();
