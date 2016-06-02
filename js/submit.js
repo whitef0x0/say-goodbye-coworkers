@@ -61,8 +61,10 @@ var renderLetterTemplate = function(valueMap){
   
   
   $(".template-form").hide();
-  $(".template-result").show();        
-  return $.tmpl(htmlMarkup, valueMap).appendTo("#letterContent");
+  $(".template-result").show();
+  var renderedTemplate =$.tmpl(htmlMarkup, valueMap);
+  renderedTemplate.appendTo("#letterContent");
+  return renderedTemplate;
 }
 
 $('#resultForm').submit(function(event){
