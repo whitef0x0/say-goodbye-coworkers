@@ -85,6 +85,10 @@ $('#templateForm').submit(function(event)
           
           $(".template-form").show();
           $(".template-result").hide(); 
+          
+          //Reset forms
+          $("#templateForm")[0].reset();
+          $("#resultForm")[0].reset();
       }else{
           //Broswer has blocked it
           alert('Please allow popups for this site');
