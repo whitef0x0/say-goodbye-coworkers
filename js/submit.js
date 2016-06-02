@@ -111,7 +111,7 @@ $('#templateForm').submit(function(event)
           
           var bodyElem = win.document.querySelector('.Am.Al.editable.LW-avf');
           
-          bodyElem.innerHTML = bodyData;
+          bodyElem.append(bodyData);
       }else{
           //Broswer has blocked it
           alert('Please allow popups for this site');
