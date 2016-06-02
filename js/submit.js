@@ -38,6 +38,7 @@ var generateMailLink = function(email, cc_emails, subject, emailBody, type){
 }
 
 var renderLetterTemplate = function(valueMap){
+  
   var htmlMarkup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Fellow ${nickname},</span></p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>It’s with ${sadness} that I must share with you my decision to leave  ${company_name}. This was ${difficulty} a very difficult decision to make.</span></p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>It’s hard to believe that ${length} ago, I was the ${first_position}. From that time, until when I was ${second_position}, and all the way to my current role as ${third_position}, I have grown so much. Thank you for teaching and inspiring me, and allowing me to do the same for you. </span></p>"+
@@ -53,7 +54,7 @@ var renderLetterTemplate = function(valueMap){
               "It’s hard to believe that ${length} ago, I was the ${first_position}. From that time, until when I was ${second_position}, and all the way to my current role as ${third_position}, I have grown so much. Thank you for teaching and inspiring me, and allowing me to do the same for you. \n"+
               "I am headed off to explore my next chapter ${next_steps}\n"+
               "I’m excited about my future there while I continue to be excited about all the things you’ll continue to accomplish here (except for you ${fun_of_person}), ${fun_of_reason}\n"+
-              "If I could leave you all with just one thought, remember \n\n ${advice} </p>"+
+              "If I could leave you all with just one thought, remember \n\n ${advice} \n"+
               "If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!\n"+
               "\n-${name}\n"+
               "\nEmail:${email}\nPhone:${phone}\nTwitter:${twitter}\nLinkedIn:${linkedin}\n";
@@ -62,6 +63,8 @@ var renderLetterTemplate = function(valueMap){
   $(".template-form").hide();
   $(".template-result").show();        
   $.tmpl(htmlMarkup, valueMap).appendTo("#letterContent");
+  
+  valueMap['advice'] = escape(valueMap['advice']);
   return $.tmpl(uriMarkup, valueMap)[0]+'';
 }
 
@@ -84,7 +87,7 @@ $('#templateForm').submit(function(event)
     event.preventDefault();
     
     var values = getFormValues('#templateForm');
-    var bodyData = escape(renderLetterTemplate(values));
+    var bodyData = renderLetterTemplate(values);
     console.log(bodyData);
     console.log(values);
     
