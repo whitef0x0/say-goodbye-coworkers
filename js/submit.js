@@ -1,5 +1,44 @@
-  $(".template-form").show();
-  $(".template-result").hide();  
+$(".template-form").show();
+$(".template-result").hide();  
+
+
+<a target="_blank" href="http://mail.aol.com/mail/compose-message.aspx?to=wdtbd-5616319084%40comm.craigslist.org&amp;subject=Looking%20for%20a%20male%20Polish%20Language%20speaking%20partner&amp;body=http://vancouver.craigslist.ca/van/act/5616319084.html" class="aol">aol mail</a>
+
+var generateMailLink = function(email, cc_emails, subject, emailBody, type){
+  
+  var href = '';
+
+  var html = emailBody;
+  var dataURI = 'data:text/html,' + encodeURIComponent(html);
+  
+  if(type === "desktop"){
+    href = "mailto:"+escape(email)
+             + "?cc="+escape(cc_emails)
+             + "&subject=" + escape(subject)
+             + "&body=" + escape(dataURI);
+    return href;
+  }else if(type === "gmail"){
+    href = "https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to="+escape(email)
+             + "&su=" + escape(subject)
+             + "&body=" + escape(dataURI);
+    return href;
+  }else if(type === "yahoo"){
+    href = "http://compose.mail.yahoo.com/?to="+escape(email)
+         + "&subj=" + escape(subject)
+         + "&body=" + escape(dataURI);
+    return href;
+  }else if(type === "hotmail"){
+    href = "https://mail.live.com/default.aspx?rru=compose&amp;to="+escape(email)
+         + "&subject=" + escape(subject)
+         + "&body=" + escape(dataURI);
+    return href;
+  }else {
+    href = "http://mail.aol.com/mail/compose-message.aspx?to="+escape(email)
+         + "&subject=" + escape(subject)
+         + "&body=" + escape(dataURI);
+    return href;
+  }
+}
 
 var renderLetterTemplate = function(valueMap){
   var markup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Fellow ${nickname},</span></p>"+
@@ -18,16 +57,40 @@ var renderLetterTemplate = function(valueMap){
   console.log($.tmpl(markup, valueMap));
 }
 
+$('#resultForm').submit(function(event){
+  event.preventDefault();
+});
+
+var getFormValues = function(formCSS_Selector){
+  var values = {};
+  $.each($(formCSS_Selector).serializeArray(), function(i, field) {
+    values[field.name] = field.value;
+  }); 
+}
+
 //Handle form submission
-$('form').submit(function(event)
+$('#templateForm').submit(function(event)
   {
     event.preventDefault();
     
-    var values = {};
-    $.each($('#templateForm').serializeArray(), function(i, field) {
-      values[field.name] = field.value;
-    }); 
-    
-    console.log(values);
+    var values = getFormValues('#templateForm');
     renderLetterTemplate(values);
+    
+    $('#resultForm').submit(function(event){
+      event.preventDefault();
+      var mailValues = getFormValues('#resultForm');
+      
+      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], mailValues['client']);
+      var win = window.open(mailLink, '_blank');
+      if(win){
+          //Browser has allowed it to be opened
+          win.focus();
+      }else{
+          //Broswer has blocked it
+          alert('Please allow popups for this site');
+      }
+
+      
+    });
+    
 });
