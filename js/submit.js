@@ -63,6 +63,8 @@ var getFormValues = function(formCSS_Selector){
   $.each($(formCSS_Selector).serializeArray(), function(i, field) {
     values[field.name] = field.value;
   }); 
+  
+  return values;
 }
 
 //Handle form submission
