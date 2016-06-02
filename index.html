@@ -244,6 +244,22 @@
             <!-- Form Name -->
             <legend>Send Form to Colleagues</legend>
             
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="primary_email">Primary Recepient Email </label>  
+              <div class="col-md-4">
+              <input id="primary_email" name="primary_email" type="text" placeholder="boss@company.com" class="form-control input-md" required="">
+              </div>
+            </div>
+            
+             <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="cc_emails">CC'd emails (seperate with commas) </label>  
+              <div class="col-md-4">
+              <input id="cc_emails" name="cc_emails" type="text" placeholder="dave@company.com,joe@company.com,betty@company.com" class="form-control input-md" required="">
+              </div>
+            </div>
+            
             <!-- Select Basic -->
             <div class="form-group">
               <label class="col-md-4 control-label" for="Subject Line">Say how sad you are to be leaving:</label>
@@ -276,7 +292,7 @@
             <div class="form-group">
               <label class="col-md-4 control-label" for="submit"></label>
               <div class="col-md-4">
-                <input id="submit" type="submit" name="submit" class="btn btn-primary" value="Create my Letter">
+                <input id="submit" type="submit" name="submit" class="btn btn-primary" value="Send my Letter">
               </div>
             </div>
         </div>
