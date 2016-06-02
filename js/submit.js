@@ -1,9 +1,6 @@
 $(".template-form").show();
 $(".template-result").hide();  
 
-
-<a target="_blank" href="http://mail.aol.com/mail/compose-message.aspx?to=wdtbd-5616319084%40comm.craigslist.org&amp;subject=Looking%20for%20a%20male%20Polish%20Language%20speaking%20partner&amp;body=http://vancouver.craigslist.ca/van/act/5616319084.html" class="aol">aol mail</a>
-
 var generateMailLink = function(email, cc_emails, subject, emailBody, type){
   
   var href = '';
@@ -85,6 +82,9 @@ $('#templateForm').submit(function(event)
       if(win){
           //Browser has allowed it to be opened
           win.focus();
+          
+          $(".template-form").show();
+          $(".template-result").hide(); 
       }else{
           //Broswer has blocked it
           alert('Please allow popups for this site');
