@@ -1,3 +1,5 @@
+  $(".template-form").show();
+  $(".template-result").hide();  
 
 var renderLetterTemplate = function(valueMap){
   var markup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Fellow ${nickname},</span></p>"+
