@@ -1,6 +1,4 @@
 
-
-
 var renderLetterTemplate = function(valueMap){
   var markup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Fellow [${nickname}],</span></p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>It’s with [${sadness}] that I must share with you my decision to leave  [${company_name}]. This was [${difficulty}] a very difficult decision to make.</span></p>"+
@@ -13,6 +11,7 @@ var renderLetterTemplate = function(valueMap){
               "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>[${contact}]</span></p>";
               
   $.tmpl(markup, valueMap).appendTo("#letterContent");
+  console.log($.tmpl(markup, valueMap))
   $("#letterContent").show();
   $("#templateForm").hide();
 }
