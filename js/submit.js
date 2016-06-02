@@ -76,6 +76,7 @@ $('#templateForm').submit(function(event)
     $('#resultForm').submit(function(event){
       event.preventDefault();
       var mailValues = getFormValues('#resultForm');
+      console.log(mailValues);
       
       var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], mailValues['client']);
       var win = window.open(mailLink, '_blank');
