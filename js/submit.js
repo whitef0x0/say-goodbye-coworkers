@@ -84,7 +84,8 @@ $('#templateForm').submit(function(event)
     event.preventDefault();
     
     var values = getFormValues('#templateForm');
-    var bodyData = renderLetterTemplate(values);
+    var bodyData = escape(renderLetterTemplate(values));
+    console.log(bodyData);
     
     $('#resultForm').submit(function(event){
       event.preventDefault();
