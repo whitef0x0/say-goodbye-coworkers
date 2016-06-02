@@ -10,7 +10,7 @@ var renderLetterTemplate = function(valueMap){
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If I could leave you all with just one thought, remember <br><br> ${advice} </p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!</span></p>"+
               "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-${name}</span></p>"+
-              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>${contact}</span></p>";
+              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Email:${email}<br>Phone:${phone}<br>Twitter:${twitter}<br>LinkedIn:${linkedin}</span></p>";
   
   $(".template-form").hide();
   $(".template-result").show();        
