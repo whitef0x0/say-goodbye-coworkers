@@ -10,8 +10,8 @@ var renderLetterTemplate = function(valueMap){
               "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-${name}</span></p>"+
               "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>${contact}</span></p>";
   
-  $(".template-form").show();
-  $(".template-result").hide();        
+  $(".template-form").hide();
+  $(".template-result").show();        
   $.tmpl(markup, valueMap).appendTo("#letterContent");
   console.log($.tmpl(markup, valueMap));
 }
