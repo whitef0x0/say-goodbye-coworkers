@@ -1,4 +1,3 @@
-console.log('onStart');
 window.onload = function(){
     console.log('onload');
     var bodyData = '<title>Hi</title></head>';
