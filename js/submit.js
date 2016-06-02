@@ -9,11 +9,11 @@ var renderLetterTemplate = function(valueMap){
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!</span></p>"+
               "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-[${name}]</span></p>"+
               "<br><br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>[${contact}]</span></p>";
-              
+  
+  $(".template-form").show();
+  $(".template-result").hide();        
   $.tmpl(markup, valueMap).appendTo("#letterContent");
-  console.log($.tmpl(markup, valueMap))
-  $("#letterContent").show();
-  $("#templateForm").hide();
+  console.log($.tmpl(markup, valueMap));
 }
 
 //Handle form submission
