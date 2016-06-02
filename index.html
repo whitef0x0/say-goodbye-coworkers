@@ -36,20 +36,6 @@
             <!-- Form Name -->
             <legend>Create a Farewell Letter</legend>
             
-            <!-- Select Basic -->
-            <div class="form-group">
-              <label class="col-md-4 control-label" for="Subject Line">Say how sad you are to be leaving:</label>
-              <div class="col-md-5">
-                <select id="Subject Line" name="subject" class="form-control">
-                  <option value="I bid you adieu">I bid you adieu</option>
-                  <option value="A Fond Farewell">A Fond Farewell</option>
-                  <option value="As I get ready to go">As I get ready to go</option>
-                  <option value="Thank you all for the help you've given me">Thank you all for the help you've given me</option>
-                  <option value="Here’s to all the sexual harassment lawsuits I escaped">Here’s to all the sexual harassment lawsuits I escaped</option>
-                </select>
-              </div>
-            </div>
-            
             <!-- Text input-->
             <div class="form-group">
               <label class="col-md-4 control-label" for="name">Your Name</label>  
@@ -250,6 +236,49 @@
         </div>
         <div class="col-xs-12" id="letterContent">
           
+        </div>
+        <div class="col-xs-12">
+          <form class="form-horizontal" id="resultForm">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>Send Form to Colleagues</legend>
+            
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="Subject Line">Say how sad you are to be leaving:</label>
+              <div class="col-md-5">
+                <select id="Subject Line" name="subject" class="form-control">
+                  <option value="I bid you adieu">I bid you adieu</option>
+                  <option value="A Fond Farewell">A Fond Farewell</option>
+                  <option value="As I get ready to go">As I get ready to go</option>
+                  <option value="Thank you all for the help you've given me">Thank you all for the help you've given me</option>
+                  <option value="Here’s to all the sexual harassment lawsuits I escaped">Here’s to all the sexual harassment lawsuits I escaped</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Select Basic -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="client">Email client:</label>
+              <div class="col-md-5">
+                <select id="Subject Line" name="subject" class="form-control">
+                  <option value="desktop">Desktop Client (e.g. Mail.app)</option>
+                  <option value="gmail">Gmail</option>
+                  <option value="yahoo">Yahoo Mail</option>
+                  <option value="hotmail">Hotmail/Outlook/Live Mail</option>
+                  <option value="aol">AOL Mail</option>
+                </select>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit"></label>
+              <div class="col-md-4">
+                <input id="submit" type="submit" name="submit" class="btn btn-primary" value="Create my Letter">
+              </div>
+            </div>
         </div>
       </div>
 
