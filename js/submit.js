@@ -51,7 +51,7 @@ var renderLetterTemplate = function(valueMap){
   $(".template-form").hide();
   $(".template-result").show();        
   $.tmpl(markup, valueMap).appendTo("#letterContent");
-  console.log($.tmpl(markup, valueMap));
+  return $.tmpl(markup, valueMap)[0]+'';
 }
 
 $('#resultForm').submit(function(event){
@@ -73,14 +73,14 @@ $('#templateForm').submit(function(event)
     event.preventDefault();
     
     var values = getFormValues('#templateForm');
-    renderLetterTemplate(values);
+    var bodyData = renderLetterTemplate(values);
     
     $('#resultForm').submit(function(event){
       event.preventDefault();
       var mailValues = getFormValues('#resultForm');
       console.log(mailValues);
       
-      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], mailValues['client']);
+      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], bodyData, mailValues['client']);
       var win = window.open(mailLink, '_blank');
       if(win){
           //Browser has allowed it to be opened
