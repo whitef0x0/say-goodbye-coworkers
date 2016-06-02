@@ -1,4 +1,4 @@
-# Say Goodbye Coworkers Letter Generator
+# Say Goodbye to your Coworkers Letter Generator
 Generate a Job Farewell letter in less than 60 seconds.
 Demo: http://whitef0x0.github.io/say-goodbye-coworkers
 
