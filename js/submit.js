@@ -48,6 +48,20 @@ var renderLetterTemplate = function(valueMap){
     grown = "It’s hard to believe that I joined over ${length} ago. Since then, I have grown so much as a ${first_position}. Thank you for teaching and inspiring me, and allowing me to do the same for you."
   }
   
+  var contact="";
+  if(valueMap['email']){
+    contact = contact+"Email:${email}<br>"
+  }
+  if(valueMap['phone']){
+    contact = contact+"Phone:${phone}<br>"
+  }
+  if(valueMap['twitter']){
+    contact = contact+"Twitter:${twitter}<br>"
+  }
+  if(valueMap['linkedin']){
+    contact = contact+"LinkedIn:${linkedin}<br>"
+  }
+  
   var htmlMarkup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Fellow ${nickname},</span></p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>It’s with ${sadness} that I must share with you my decision to leave  ${company_name}. This was ${difficulty} a very difficult decision to make.</span></p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>"+grown+"</span></p>"+
@@ -56,7 +70,7 @@ var renderLetterTemplate = function(valueMap){
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If I could leave you all with just one thought, remember <br><br> ${advice} </p>"+
               "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!</span></p>"+
               "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-${name}</span></p>"+
-              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Email:${email}<br>Phone:${phone}<br>Twitter:${twitter}<br>LinkedIn:${linkedin}</span></p>";
+              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>"+contact+"</span></p>";
   
   $(".template-form").hide();
   $(".template-result").show();
