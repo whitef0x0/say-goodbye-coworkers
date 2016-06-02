@@ -95,7 +95,7 @@ $('#templateForm').submit(function(event)
       var mailValues = getFormValues('#resultForm');
       console.log(mailValues);
       
-      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], '', mailValues['client']);
+      var mailLink = generateMailLink(mailValues['primary_email'], mailValues['cc_emails'], mailValues['subject'], '', 'desktop');
       var win = window.open(mailLink, '_blank');
       if(win){
           
@@ -107,11 +107,11 @@ $('#templateForm').submit(function(event)
           $("#resultForm")[0].reset();
           
           //Browser has allowed it to be opened
-          win.focus();
+          //win.focus();
           
-          var bodyElem = win.document.querySelector('.Am.Al.editable.LW-avf');
+          //var bodyElem = win.document.querySelector('.Am.Al.editable.LW-avf');
           
-          bodyElem.append(bodyData);
+          //bodyElem.append(bodyData);
       }else{
           //Broswer has blocked it
           alert('Please allow popups for this site');
