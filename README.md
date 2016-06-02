@@ -1,4 +1,4 @@
-# Say Goodbye Coworkers Letter Generator
+# Say Goodbye to Coworkers Letter Generator
 
 Demo: http://whitef0x0.github.io/say-goodbye-coworkers
 
