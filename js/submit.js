@@ -62,15 +62,15 @@ var renderLetterTemplate = function(valueMap){
     contact = contact+"LinkedIn:${linkedin}<br>"
   }
   
-  var htmlMarkup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>Fellow ${nickname},</span></p>"+
-              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>It’s with ${sadness} that I must share with you my decision to leave  ${company_name}. This was ${difficulty} a very difficult decision to make.</span></p>"+
-              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>"+grown+"</span></p>"+
-              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>I am headed off to explore my next chapter ${next_steps}</span></p>"+
-              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>I’m excited about my future there while I continue to be excited about all the things you’ll continue to accomplish here (except for you ${fun_of_person}), ${fun_of_reason}</span></p>"+
-              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If I could leave you all with just one thought, remember <br><br> ${advice} </p>"+
-              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!</span></p>"+
-              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>-${name}</span></p>"+
-              "<br><p><span style='color: #000000; font-family: arial, helvetica, sans-serif;'>"+contact+"</span></p>";
+  var htmlMarkup = "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>Fellow ${nickname},</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>It’s with ${sadness} that I must share with you my decision to leave  ${company_name}. This was ${difficulty} a very difficult decision to make.</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>"+grown+"</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>I am headed off to explore my next chapter ${next_steps}</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>I’m excited about my future there while I continue to be excited about all the things you’ll continue to accomplish here (except for you ${fun_of_person}), ${fun_of_reason}</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>If I could leave you all with just one thought, remember, <br><br> ${advice} </p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>If you ever want to get in touch, my contact info is below. This isn’t goodbye, our paths will cross again. Hopefully at farewell happy hour drinks at 5!</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>-${name}</span></p>"+
+              "<p><span style='color: #000000; font-family: arial, helvetica, sans-serif; font-size: 16px;'>"+contact+"</span></p>";
   
   $(".template-form").hide();
   $(".template-result").show();
