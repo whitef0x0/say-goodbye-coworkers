@@ -41,11 +41,11 @@ var renderLetterTemplate = function(valueMap){
   
   var grown = "";
   if(valueMap['second_position'] !== "" && valueMap['third_position'] !== ""){
-    grown = "It’s hard to believe that ${length} ago, I was the ${first_position}. From that time, until when I was ${second_position}, and all the way to my current role as ${third_position}, I have grown so much. Thank you for teaching and inspiring me, and allowing me to do the same for you."
+    grown = "It’s hard to believe that ${employment_length} ago, I was the ${first_position}. From that time, until when I was ${second_position}, and all the way to my current role as ${third_position}, I have grown so much. Thank you for teaching and inspiring me, and allowing me to do the same for you."
   }else if(valueMap['second_position'] !== "" && valueMap['third_position'] == ""){
-    grown = "It’s hard to believe that ${length} ago, I was the ${first_position}. From that time and all the way to my current role as ${third_position}, I have grown so much. Thank you for teaching and inspiring me, and allowing me to do the same for you."
+    grown = "It’s hard to believe that ${employment_length} ago, I was the ${first_position}. From that time and all the way to my current role as ${third_position}, I have grown so much. Thank you for teaching and inspiring me, and allowing me to do the same for you."
   }else{
-    grown = "It’s hard to believe that I joined over ${length} ago. Since then, I have grown so much as a ${first_position} and as a person. Thank you for teaching and inspiring me, and allowing me to do the same for you."
+    grown = "It’s hard to believe that I joined over ${employment_length} ago. Since then, I have grown so much as a ${first_position} and as a person. Thank you for teaching and inspiring me, and allowing me to do the same for you."
   }
   
   var contact="";
